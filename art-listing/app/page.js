@@ -13,6 +13,7 @@ export default function Home() {
           <LinkButton href="/about-us" text="About Us" style={{ marginRight: "10px" }} />
           <div style={{ marginTop: "300px" }}>
             <Footer />
+
           </div>
         </div>
       </main>

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import Footer from '../components/Footer';
 import LinkButton from '../components/LinkButton';
-import { FaPlus } from "react-icons/fa";
+
 
 const Home = () => {
     return (
@@ -13,7 +13,7 @@ const Home = () => {
                 <Link href="/" style={{ marginRight: '10px' }}>
                     <p><HiArrowNarrowLeft size={40} /></p>
                 </Link>
-                <LinkButton href="/browse" text="+ Add a listing" style={{ marginLeft: "1100px" }} />
+                <LinkButton href="/add-listing" text="+ Add a listing" style={{ marginLeft: "1100px" }} />
             </div>
             <h1 style={{ alignContent: "center", marginLeft: "650px" }}>Art Listings</h1>
             <ArtListing

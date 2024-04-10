@@ -1,4 +1,3 @@
-// components/ArtListing.js
 import Image from 'next/image';
 
 const ArtListing = ({ imageUrl, title, author, price, date, country, description, phone }) => {

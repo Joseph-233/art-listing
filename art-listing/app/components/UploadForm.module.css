@@ -1,0 +1,32 @@
+/* components/UploadForm.module.css */
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9); /* Add box-shadow for 3D effect */
+}
+
+.input {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 60px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.8); /* Add inset box-shadow for input fields */
+}
+
+.submitButton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box-shadow for 3D effect */
+}
+
+.submitButton:hover {
+    background-color: #0056b3;
+}
