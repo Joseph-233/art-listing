@@ -5,28 +5,27 @@ import React from 'react';
 const linkStyle = {
     marginRight: "20px",
     marginTop: "100px",
-    textDecoration: "none", // Removes the underline
+    textDecoration: "none",
     color: "blue",
     cursor: "pointer",
-    border: "2px solid blue", // Adds a yellow border, adjust thickness as needed
-    borderRadius: "8px", // Gives the border rounded corners
+    border: "2px solid blue",
+    borderRadius: "8px",
     fontSize: "16px",
-    padding: "20px 40px", // Adds some padding inside the border
-    transition: "transform 0.3s, background-color 0.3s", // Animates both background color and transform properties
-    display: "inline-block", // Ensures padding and border are applied correctly
-    backgroundColor: "white", // Starting background color
-};
-
-const hoverStyle = {
-    transform: "translateY(-10px)", // Creates a floating effect by moving the button up on hover
-    backgroundColor: "black", // Changes background color on hover for a cool effect
+    padding: "20px 40px",
+    transition: "transform 0.3s, background-color 0.3s",
+    display: "inline-block",
+    backgroundColor: "white",
 };
 
 
-const LinkButton = ({ href, text, style }) => (
-    <Link href={href} passHref>
-        <p style={{ ...linkStyle, ...style }}>{text}</p>
-    </Link>
+
+const LinkButton = ({ href, text, style, children }) => (
+    <div>
+        <Link href={href} passHref>
+            <p style={{ ...linkStyle, ...style }}>{text}</p>
+        </Link>
+        {children}
+    </div>
 );
 
 export default LinkButton;
