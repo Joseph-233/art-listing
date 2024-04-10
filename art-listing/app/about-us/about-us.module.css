@@ -1,0 +1,37 @@
+.container {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.descriptionContainer {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  color: #000;
+  max-width: 80%;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.logoSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Allows logos to wrap on smaller screens */
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin: 0 15px;
+  margin-bottom: 15px; /* Adds space below each logo if they wrap */
+}

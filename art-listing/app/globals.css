@@ -13,7 +13,7 @@ a, p {
 }
 
 a:hover, p:hover {
-  text-decoration: underline; /* Adds an underline to links and paragraphs on hover for a visual indicator */
+  text-decoration: none; /* Adds an underline to links and paragraphs on hover for a visual indicator */
 }
 
 .link-container {
