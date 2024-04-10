@@ -32,6 +32,10 @@ const styles = {
         padding: '20px',
         marginTop: '20px',
         textAlign: 'center',
+        position: 'static', 
+        bottom: '0', 
+        width: '100%', 
+        zIndex: '1000', 
     },
     container: {
         maxWidth: '1200px',
@@ -39,6 +43,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
+        paddingBottom: '80px', // Adjust container padding to prevent overlap with footer
     },
     content: {
         marginBottom: '20px',
@@ -56,8 +61,8 @@ const styles = {
         textDecoration: 'none',
     },
     logo: {
-        width: '30px', // Adjust the logo size as needed
+        width: '30px', 
         height: 'auto',
-        margin: '0 10px', // Adjust spacing around logos
+        margin: '0 10px', 
     },
 };
