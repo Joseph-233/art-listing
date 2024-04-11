@@ -1,7 +1,6 @@
 // components/UploadForm.js
-// Assuming you've already imported useState and React at the top of the file
-
 import React, { useState } from 'react';
+import axios from 'axios';
 import styles from './UploadForm.module.css'; // Import CSS module for styling
 
 const UploadForm = () => {
@@ -26,19 +25,24 @@ const UploadForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle form submission (e.g., send data to backend)
-        console.log(formData);
-        // Reset form after submission
-        setFormData({
-            imageUrl: '',
-            title: '',
-            author: '',
-            price: '',
-            date: '',
-            country: '',
-            description: '',
-            phone: ''
-        });
+        // Send data to backend
+        axios.post('http://localhost:5000/api/saveFormData', formData)
+            .then(response => {
+                console.log('Data saved:', response.data);
+                setFormData({
+                    imageUrl: '',
+                    title: '',
+                    author: '',
+                    price: '',
+                    date: '',
+                    country: '',
+                    description: '',
+                    phone: ''
+                });
+            })
+            .catch(error => {
+                console.error('Error saving data:', error);
+            });
     };
 
     return (
@@ -76,10 +80,9 @@ const UploadForm = () => {
                 className={styles.input}
             />
             <input
-                type="text"
+                type="date"
                 name="date"
                 value={formData.date}
-                placeholder="Date"
                 onChange={handleChange}
                 className={styles.input}
             />
@@ -91,16 +94,15 @@ const UploadForm = () => {
                 onChange={handleChange}
                 className={styles.input}
             />
-            <input
-                type="text"
+            <textarea
                 name="description"
                 value={formData.description}
                 placeholder="Description"
                 onChange={handleChange}
-                className={styles.input}
+                className={styles.textarea}
             />
             <input
-                type="text"
+                type="tel"
                 name="phone"
                 value={formData.phone}
                 placeholder="Phone"
