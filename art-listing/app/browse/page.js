@@ -36,7 +36,7 @@ const Home = () => {
                 description="This is a description of the art."
             />
             <ArtListing
-                imageUrl="/path/to/art.jpg" // Replace with your image path
+                imageUrl="/pic3.png"
                 title="Art Title"
                 author="Artist Name"
                 price="$100"
